@@ -1,0 +1,36 @@
+div .color{
+    border-bottom: 2px solid rgb(187, 134, 134);
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 100px;
+}
+div h4{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.details{
+    transform: translateX(200px)
+}
+.mobile{
+    transform: translateX(-20px)
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 750px){
+    .details{
+        transform: translateX(90px)
+    }
+    .mobile{
+        transform: translateX(60px)
+    }
+    
+}
+
+@media only screen and (max-width: 750px) and (min-width: 300px){
+    .details{
+        transform: translateX(20px)
+    }
+    .mobile{
+        transform: translateX(30px)
+    }
+    
+}

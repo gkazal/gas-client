@@ -1,0 +1,12 @@
+.imageParent{
+    position: relative;
+}
+.horizontalIcon{
+    transform: translateY(-30px);
+}
+.horizontal{
+    /* position: absolute; */
+    /* top: 50%; */
+    /* z-index: -1; */
+
+}
