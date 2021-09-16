@@ -1,0 +1,14 @@
+.card .topForm{
+    padding: 10px;
+}
+
+.orderButton{
+    background-color: var(--orderButton2);
+
+    border: none;
+    color: white;
+    /* padding: 10px; */
+    border-radius: 8px;
+    width: 285px;
+    cursor: pointer;
+}

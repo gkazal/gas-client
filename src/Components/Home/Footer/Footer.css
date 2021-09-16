@@ -18,5 +18,18 @@
 
 .logo{
     transform: translateY(-80px);
+}
 
+@media only screen and (max-width: 749px) and (min-width: 300px){
+    .logo{
+        transform: translateY(-40px);
+    }
+    .logo img{
+        width: 150px;
+    }
+    .footerBrand{
+        transform: translateX(20px);
+
+    }
+    
 }

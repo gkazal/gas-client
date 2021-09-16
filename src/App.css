@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+:root{
+  --orderButton: #1EAE98;
+  --orderButton2: #FFB573;
+}
+
+h2{
+  font-size: 24px;
+}
+h1{
+  font-size: 45px;
+}
+p{
+  font-size: 14px;
+}
+
+

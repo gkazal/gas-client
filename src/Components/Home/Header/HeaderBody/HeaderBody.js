@@ -3,12 +3,16 @@ import image from '../../../../images/Group 1.png';
 import timer from '../../../../images/timer.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faBars, faUserCircle, faLocationArrow } from '@fortawesome/free-solid-svg-icons'
+import { faLocationArrow } from '@fortawesome/free-solid-svg-icons'
 import './HeaderBody.css'
-
-import icons from '../../../../images/searchIcon.png'
+import { useHistory } from 'react-router';
 
 const HeaderBody = () => {
+
+    const history = useHistory()
+    const handleSearch = () => {
+        history.push(`/order`)
+    }
 
 
     return (
@@ -16,7 +20,7 @@ const HeaderBody = () => {
             <main className="row d-flex align-items-center offset-md-1" style={{ marginTop: '150px' }} >
                 <div className="col-md-6">
                     <div className="headerText" >
-                        <h1 className="text-bolt">Get Your Product  <br /> Delivered </h1>
+                        <h1 style={{fontSize: '55px !important'}} className="text-bolt">Get Your Product  <br /> Delivered </h1>
 
                         <div className="mt-4 d-flex">
                             <img style={{ width: '15px' }} src={timer} alt="" /><small className="ml-2"> in 15 minutes</small>
@@ -30,7 +34,7 @@ const HeaderBody = () => {
                                         <input class="searchBox" type="search" name="search" placeholder="Search Location..." />
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-submit mb-2 ml-2">Search</button>
+                                <button  onClick={()=> handleSearch()} type="button" class="btn btn-submit mb-2 ml-2">Search</button>
                             </form>
                         </div>
 

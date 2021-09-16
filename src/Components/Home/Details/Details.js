@@ -37,7 +37,7 @@ const Details = () => {
 
 
                 <div className="col-md-6 mobile mt-3">
-                    <img style={{ width: '100%' }} src={phone} alt="" />
+                    <img  src={phone} alt="" />
                 </div>
 
 

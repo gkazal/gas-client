@@ -1,0 +1,61 @@
+.loginFrom{
+    background-color: #FFFFFF;
+}
+
+.loginButton{
+    background-image: linear-gradient(to bottom, #1EAE98
+    , #000000
+    );
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 120px;
+    cursor: pointer;
+
+}
+
+/* input[type=submit] {
+    cursor: pointer;
+    margin: auto;
+    padding: 10px;
+  } */
+  
+  .inputButton{
+      position: relative;
+  }
+  .inputButton .loginButton{
+    position: absolute;
+    left: 50%;
+    margin-top: 20px;
+
+    transform: translate(-50%, -50%);
+  }
+
+  .form-control{
+      width: 400px;
+      background-color: #EEEEEE;
+      border: none;
+
+  }
+
+  input[type=text] {
+    /* width: 100%; */
+    background-image: url('../../../images/emailLogo.png');
+    background-position: 10px 18px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+  }
+
+  input[type=password] {
+    /* width: 100%; */
+    background-image: url('../../../images/passwordLogo.png');
+    background-position: 10px 18px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+  }
+
+  .ReactModal__Overlay {
+    background-color: rgba(0,0,0,0.50) !important;
+
+  }
