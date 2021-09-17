@@ -55,18 +55,17 @@ const Order = () => {
                                 offsetLeft={-20}
                                 offsetTop={-10}
                             >
-
-
                             </Marker>
-
                         </div>
                     ))}
 
                 </ReactMapGL>
 
                 <div class="card" style={{ width: '20rem' }}>
-                    <div className="topForm">
-                        <h2 className="text-white">Give Those Information  we need to place your order</h2>
+                    <div className=" topForm">
+                        <div className="topStyleForm">
+                            <h2 className="text-white">Give Those Information we need to place your order</h2>
+                        </div>
                     </div>
                     <div class="card-body">
                         <p className="card-title">Your Location</p>

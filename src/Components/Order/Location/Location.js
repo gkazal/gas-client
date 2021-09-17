@@ -38,7 +38,7 @@ const Location = () => {
 
     // const [selectedLocation, setSelectedLocation] = useState({})
     // console.log(selectedLocation.title)
-     const history = useHistory()
+    const history = useHistory()
     const handleSelectedLocation = (result) => {
         // const {name} = result.title
 
@@ -70,7 +70,7 @@ const Location = () => {
                                 <p onClick={() => handleSelectedLocation(result)} className="cursor-pointer text-2xl animate-bounce"
                                 >📍{result.title}</p>
                             </Marker>
-                            
+
                             {/* { selectedLocation.long === result.long ? (
                                 <Popup onClose={() => setSelectedLocation({})}
                                     closeOnClick={true}
@@ -97,8 +97,10 @@ const Location = () => {
 
                 <div>
                     <div class="card card-location" style={{ width: '20rem' }}>
-                        <div className="topForm">
-                            <h2 className="text-white">Give Those Information we need to place your order</h2>
+                        <div className=" topForm">
+                            <div className="topStyleForm">
+                                <h2 className="text-white">Give Those Information we need to place your order</h2>
+                            </div>
                         </div>
                         <div class="card-body">
                             <p class="card-title">Your Location</p>

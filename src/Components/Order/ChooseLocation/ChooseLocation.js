@@ -7,6 +7,8 @@ import './ChooseLocation.css'
 import { Link, useParams } from 'react-router-dom';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import fakeData from '../FakeData/FakeDate';
+import Modal from 'react-modal';
+
 
 const ChooseLocation = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -34,10 +36,30 @@ const ChooseLocation = () => {
     });
 
     const [selectedLocation, setSelectedLocation] = useState({})
-    console.log(selectedLocation.title)
+    console.log(selectedLocation)
 
-    const {title} = useParams();
-    console.log(title)
+
+    const { title } = useParams();
+
+
+    const [modalIsOpen, setIsOpen] = useState(false);
+    function openModal() {
+        setIsOpen(true);
+    }
+    function closeModal() {
+        setIsOpen(false);
+    }
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+        },
+    };
+    Modal.setAppElement('#root');
 
 
     return (
@@ -75,8 +97,8 @@ const ChooseLocation = () => {
                                     {result.title} <br />
                                     Price: {result.price} <br />
                                     Latitude: {result.lat} <br />
-                                    Longitude: {result.long}
-                                    {/* {result.img} */}
+                                    Longitude: {result.long} <br />
+                                    <img style={{ height: '80px', width: '80px' }} src={result.img} alt="" />
                                 </Popup>
 
                             ) : (
@@ -91,25 +113,16 @@ const ChooseLocation = () => {
                         <p  className="curser-pointer text-2xl animate-bounce">📍</p>
 
                     </Marker>
-                    <Marker latitude={23.828} longitude={90.417} >
-                        <p>📍</p>
-                    </Marker>
-                    <Marker latitude={23.829} longitude={90.419} >
-                        <p>📍</p>
-                    </Marker>
-                    <Marker latitude={23.829} longitude={90.414} >
-                        <p>📍</p>
-                    </Marker>
-                    <Marker latitude={23.826} longitude={90.415} >
-                        <p>📍</p>
-                    </Marker> */}
+                     */}
 
                 </ReactMapGL>
 
                 <div>
                     <div class="card choose-location" style={{ width: '20rem' }}>
-                        <div className="topForm">
-                            <h2 className="text-white">Give Those Information we need to place your order</h2>
+                        <div className=" topForm">
+                            <div className="topStyleForm">
+                                <h2 className="text-white">Give Those Information we need to place your order</h2>
+                            </div>
                         </div>
                         <div class="card-body">
                             <p class="card-title">Your Location</p>
@@ -141,7 +154,16 @@ const ChooseLocation = () => {
                                 </div>
                             </form>
                             <div>
-                                <button className="orderButton " type="submit">Order Now</button>
+                                <button onClick={openModal} className="orderButton " type="submit">Order Now</button>
+                                <Modal
+                                    isOpen={modalIsOpen}
+                                    onRequestClose={closeModal}
+                                    style={customStyles}
+                                    contentLabel="Example Modal"
+                                >
+
+                                    <h2 style={{ padding: '30px' }}>You have sucessfully ordered</h2>
+                                </Modal>
                             </div>
                             <p className="text-center">
                                 <Link to="home"> Schedule Order</Link>

@@ -1,7 +1,7 @@
 .headerText {
     margin-left: 20%;
 }
-.searchContainer {
+.searchContainer-header {
     display: grid;
     grid-template-columns:1.5rem 4fr 1fr;
     width:350px;
@@ -10,8 +10,6 @@
     overflow: hidden;
     background-repeat: no-repeat;
     background-color: rgb(240, 239, 239);
-
-    /* background-image: url(../../../../images/searchIcon.png) */
   }
 
   .btn-submit{
@@ -19,30 +17,22 @@
     border: none;
     border-radius: 5px;
     color: white;
-    padding: 5px;
-
-
+    /* padding: 5px; */
+    height: 42px;
   }
-/*   
-  .searchContainer:focus-within i {
-    display: none;
-  } */
-  
-  .searchContainer:focus-within .searchBox{
+  .searchContainer-header:focus-within .searchBox{
     grid-column:1/4;
   }
   
-  .searchContainer:focus-within .searchBox::placeholder {
+  .searchContainer-header:focus-within .searchBox::placeholder {
     color:transparent;
   }
 
-  .searchContainer:focus-within .searchIcon {
+  .searchContainer-header:focus-within .searchIcon {
     color:transparent;
   }
-  
+
   .searchIcon {
-      /* margin-top: 50%; */
-    /* padding: 0.5rem; */
     grid-row:1;
     grid-column:1;
     z-index:2;
@@ -64,10 +54,10 @@
       color: silver;
       width: 100px;
       height: 40px;
-      border-radius: 10px;
+      border-radius: 8px;
       border: 1px solid rgb(224, 221, 221);
       padding: 10px;
-      margin: 5px;
+      margin-right: 5px;
       background-color: rgb(255, 255, 255);
   }
   .button span {
@@ -78,31 +68,25 @@
       width: 60%;
   }
 
+  @media only screen and (max-width: 1220px) and (min-width: 760px){
 
-@media only screen and (max-width: 1220px) and (min-width: 760px){
+      .searchContainer-header{
+          width: 250px
+      }
+      .img {
+          width: 500px;
+      }
+    
+  }
+  @media only screen and (max-width: 420px) and (min-width: 300px){
 
-    .searchContainer{
-        width: 250px
-    }
-    .img {
-        width: 500px;
-    }
-   
-}
-@media only screen and (max-width: 420px) and (min-width: 300px){
-
-    .searchContainer{
-        width: 150px
-    }
-    .headerImage{
-        margin-top: 20px;
-    }
-    .headerText{
-        margin-left: 10%;
-    }
-   
-    /* .headerImage .img {
-        width: 300px;
-    }
-    */
-}
+      .searchContainer-header{
+          width: 150px
+      }
+      .headerImage{
+          margin-top: 20px;
+      }
+      .headerText{
+          margin-left: 10%;
+      }
+  }

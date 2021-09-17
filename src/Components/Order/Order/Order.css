@@ -10,13 +10,15 @@
     /* background-color: #e2ddc6; */
 }
 
-.topForm{
+.card .topForm{
     background-color: var(--orderButton);
-    padding: 40px;
-    
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
+.topStyleForm{
+    padding: 20px
+}
+
 .searchContainer {
     display: grid;
     grid-template-columns:1.5rem 4fr 1fr;
@@ -32,7 +34,7 @@
   .card{
       position: absolute;
       top: 15%;
-      left: 10%;
+      left: 5%;
       height: auto;
       border-radius: 10px !important;
       

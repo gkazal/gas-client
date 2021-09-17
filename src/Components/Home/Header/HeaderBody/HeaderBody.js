@@ -28,13 +28,13 @@ const HeaderBody = () => {
                         <small style={{ color: '#C0C0C0	' }}> Our Service is Currently Available on Dhaka city  </small>
                         <div className="mt-4">
                             <form class="form-inline">
-                                <div class="form-group mb-2 ">
-                                    <div className="searchContainer form-inline">
+                                <div class="form-group mb-1 ">
+                                    <div className="searchContainer-header form-inline">
                                         <FontAwesomeIcon className="searchIcon" icon={faLocationArrow}></FontAwesomeIcon>
                                         <input class="searchBox" type="search" name="search" placeholder="Search Location..." />
                                     </div>
                                 </div>
-                                <button  onClick={()=> handleSearch()} type="button" class="btn btn-submit mb-2 ml-2">Search</button>
+                                <button  onClick={()=> handleSearch()} type="button" class="btn btn-submit mb-1 ml-2">Search</button>
                             </form>
                         </div>
 
@@ -46,7 +46,7 @@ const HeaderBody = () => {
                                 <FontAwesomeIcon icon={faLocationArrow}></FontAwesomeIcon> <small>Nikunjo-02</small>
                             </button>
                             <button>
-                                <FontAwesomeIcon icon={faLocationArrow}></FontAwesomeIcon> <small>Gulshan</small>
+                                <FontAwesomeIcon icon={faLocationArrow}></FontAwesomeIcon> <small>Banani</small>
                             </button>
                         </div>
                     </div>

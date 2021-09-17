@@ -27,17 +27,17 @@ const Details = () => {
 
                     <div className="mt-5 row d-flex" >
                         <div >
-                            <img style={{width:'70%'}} src={google} alt="" />
+                            <img style={{ width: '70%' }} src={google} alt="" />
                         </div>
                         <div className="appleStore">
-                            <img style={{width:'70%'}} src={apple} alt="" />
+                            <img style={{ width: '70%' }} src={apple} alt="" />
                         </div>
                     </div>
                 </div>
 
 
                 <div className="col-md-6 mobile mt-3">
-                    <img  src={phone} alt="" />
+                    <img src={phone} alt="" />
                 </div>
 
 

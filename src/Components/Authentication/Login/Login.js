@@ -46,18 +46,15 @@ const Login = ({ modalIsOpen, closeModal }) => {
 
                     <div className="form-group">
 
-                        <input type="text" {...register("Email", { required: true })} placeholder="Email" className="form-control" required />
-                        {errors.email && <span className="text-danger">This field is required</span>}
+                        <input type="text" {...register("Email", { required: true })} placeholder="Email" className="form-control"  />
                     </div>
                     <div className="form-group">
-                        <input type="password" {...register("Password", { required: true })} placeholder="Password" className="form-control" required />
-                        {errors.password && <span className="text-danger">This field is required</span>}
+                        <input type="password" {...register("Password", { required: true })} placeholder="Password" className="form-control"  />
                     </div>
 
                     {newUser &&
                         <div className="form-group">
-                            <input type="password" {...register("Password", { required: true })} placeholder="Retype Password" className="form-control" required />
-                            {errors.password && <span className="text-danger">This field is required</span>}
+                            <input type="password" {...register("Password", { required: true })} placeholder="Retype Password" className="form-control"  />
                         </div>}
 
 
